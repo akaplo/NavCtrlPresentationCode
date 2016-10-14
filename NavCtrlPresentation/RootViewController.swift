@@ -40,12 +40,12 @@ class RootViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return favoritesList.favorites.isEmpty ? 1 : 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return section == 0 ? familyNames.count : 1
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -63,23 +63,35 @@ class RootViewController: UITableViewController {
         }
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return section == 0 ? "All Font Families" : "My Favorite Fonts"
     }
-    */
 
-    /*
+
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+                // font names list
+            let cell = tableView.dequeueReusableCellWithIdentifier(RootViewController.familyCell,
+                                                                   forIndexPath: indexPath)
+            cell.textLabel?.font = fontForDisplay(atIndexPath: indexPath)
+            cell.textLabel?.text = familyNames[indexPath.row]
+            cell.detailTextLabel?.text = familyNames[indexPath.row]
+            return cell
+        } else {
+                // the favorites list
+            return tableView.dequeueReusableCellWithIdentifier(RootViewController.favoritesCell,
+                                                                   forIndexPath: indexPath)
+        }
+        
+
+    }
+    
+
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
     /*
     // Override to support editing the table view.
