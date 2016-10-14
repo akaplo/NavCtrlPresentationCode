@@ -35,6 +35,7 @@ class RootViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
 
     // MARK: - Table view data source
 
@@ -120,14 +121,28 @@ class RootViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
+        let listVC = segue.destinationViewController as! FontListTableViewController
+        
+        if indexPath.section == 0 {
+            //FontNames list
+            let familyName = familyNames[indexPath.row]
+            listVC.fontNames = (UIFont.fontNamesForFamilyName(familyName) as [String]).sort()
+            
+        }else{
+            //Favorites list
+            listVC.fontNames = favoritesList.favorites
+            listVC.navigationItem.title = "Favorites"
+            listVC.showsFavorites = true
+        }
     }
-    */
+    
 
 }
