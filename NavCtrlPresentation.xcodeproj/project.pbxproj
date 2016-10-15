@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		228BDA0D1DB15EF100B1BF25 /* FontListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228BDA0C1DB15EF100B1BF25 /* FontListTableViewController.swift */; };
+		228BDA111DB1B28E00B1BF25 /* FontSizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228BDA101DB1B28E00B1BF25 /* FontSizesViewController.swift */; };
 		93C95E1A1DB13D9000CCB677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C95E191DB13D9000CCB677 /* AppDelegate.swift */; };
 		93C95E1F1DB13D9000CCB677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C95E1D1DB13D9000CCB677 /* Main.storyboard */; };
 		93C95E211DB13D9000CCB677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C95E201DB13D9000CCB677 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		228BDA0C1DB15EF100B1BF25 /* FontListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontListTableViewController.swift; sourceTree = "<group>"; };
+		228BDA101DB1B28E00B1BF25 /* FontSizesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontSizesViewController.swift; sourceTree = "<group>"; };
 		93C95E161DB13D9000CCB677 /* NavCtrlPresentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavCtrlPresentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C95E191DB13D9000CCB677 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93C95E1E1DB13D9000CCB677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				93C95E251DB13D9000CCB677 /* Info.plist */,
 				93C95E2D1DB1416000CCB677 /* RootViewController.swift */,
 				228BDA0C1DB15EF100B1BF25 /* FontListTableViewController.swift */,
+				228BDA101DB1B28E00B1BF25 /* FontSizesViewController.swift */,
 			);
 			path = NavCtrlPresentation;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228BDA111DB1B28E00B1BF25 /* FontSizesViewController.swift in Sources */,
 				93C95E1A1DB13D9000CCB677 /* AppDelegate.swift in Sources */,
 				93C95E2C1DB13ED600CCB677 /* FavoritesList.swift in Sources */,
 				228BDA0D1DB15EF100B1BF25 /* FontListTableViewController.swift in Sources */,

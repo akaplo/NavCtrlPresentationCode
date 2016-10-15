@@ -57,5 +57,20 @@ class FontListTableViewController: UITableViewController {
         cell.detailTextLabel?.text = fontNames[indexPath.row]
         return cell
     }
+    
+    //MARK: Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //get the new view controller using [segue destinationViewController].
+        //pass the selected object to the new view controller
+        
+        let tableViewCell = sender as! UITableViewCell
+        let indexPath = tableView.indexPathForCell(tableViewCell)!
+        let font = fontForDisplay(atIndexPath: indexPath)
+        
+        let sizesVC = segue.destinationViewController as! FontSizesViewController
+        sizesVC.title = font.fontName
+        sizesVC.font = font
+    }
 
 }

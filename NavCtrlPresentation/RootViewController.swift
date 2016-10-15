@@ -129,6 +129,8 @@ class RootViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
+        
+        //listVC is a reference to the destination view controller, we use this to pass along the information needed to display the impending list
         let listVC = segue.destinationViewController as! FontListTableViewController
         
         if indexPath.section == 0 {
