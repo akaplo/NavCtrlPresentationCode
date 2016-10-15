@@ -23,7 +23,7 @@ class FavoritesList {
         // if theres any favs we retrieved, use them, otherwise dont
         favorites = storedFavorites != nil ? storedFavorites! : []
     }
-    func addFavorites(fontName: String) {
+    func addFavorite(fontName: String) {
         if !favorites.contains(fontName) {
             favorites.append(fontName)
             saveFavorites()
